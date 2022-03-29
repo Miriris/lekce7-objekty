@@ -44,6 +44,12 @@ let poleKamaradu = [
   { jmeno: 'Olivie', vek: 40},
 ];
 
+
+poleKamaradu.forEach() {
+  console.log()
+} 
+
+
 console.log(poleKamaradu);
 poleKamaradu.sort(porovnejObj);
 console.log(poleKamaradu);
