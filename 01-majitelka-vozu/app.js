@@ -22,12 +22,17 @@ let majitelka = auto.majitel.jmeno + ' ' + auto.majitel.prijmeni;
 let znacka = auto.znacka;
 let spz = auto.spz;
 
+document.getElementById('majitelka').textContent = majitelka;
+document.getElementById('znacka').textContent = auto.znacka;
+document.getElementById('spz').textContent = auto.spz;
+
 /*
 let poleCisel = [12, 78, 18, 40];
 console.log(poleCisel);
-poleCisel.sort(porovnej);
-console.log(poleCisel);
 
+1.možnost - callback funkce:
+poleCisel.sort(porovnej);
+  
 function porovnej(cis1, cis2) {
   if (cis1 > cis2) {
     return 1;
@@ -36,7 +41,20 @@ function porovnej(cis1, cis2) {
   }
 };
 
+2.možnost - anonymní funkce:
+poleCisel.sort(function (cis1, cis2) {
+  if (cis1 > cis2) {
+    return 1;
+  } else {
+    return -1;
+  }
+})
 
+console.log(poleCisel);
+
+
+
+let poleOsob - bylo na začátku, potom přejmenováno na poleKamaradu
 let poleKamaradu = [
   { jmeno: 'Vanda', vek: 12},
   { jmeno: 'Hubert', vek: 78},
@@ -44,14 +62,47 @@ let poleKamaradu = [
   { jmeno: 'Olivie', vek: 40},
 ];
 
+console.log(poleOsob);
+poleOsob.sort(porovnejObj)
 
-poleKamaradu.forEach() {
-  console.log()
-} 
+function porovnejObj(object1, object2) {
+  if (object1.vek > object2.vek) {
+    return 1;
+  } else {
+    return -1;
+  }
+};
 
+console.log(poleKamaradu); //špatně zobrazuje v devtools - už seřazené
+vidíme to na foreachem proiterované hodnotě věk
+poleKamaradu.forEach(function(object) {
+  console.log(object.vek);
+});
 
-console.log(poleKamaradu);
 poleKamaradu.sort(porovnejObj);
 console.log(poleKamaradu);
+
+poleKamaradu.forEach(function(object) {
+  console.log(object.vek);
+});
+
+poleOsob.forEach(pridejNarozeni)
+
+function pridejNarozeni(osoba) {
+  osoba.narozeni = 2022 - osoba.vek;
+  return osoba;
+} 
+
+poleOsob.filter(najdiDospele);
+
+function najdiDospele(osoba) {
+  if (osoba.vek > 18) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
 
 */

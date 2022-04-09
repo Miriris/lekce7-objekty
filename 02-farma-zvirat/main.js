@@ -10,7 +10,7 @@
 */
 
 let farma = document.querySelector('.farma');
-farma.appendChild(zvire);
+//farma.appendChild(zvire);
 
 let zvirata = [
   {
@@ -24,31 +24,25 @@ let zvirata = [
   },
 
   {
-    jmeno: 'Husa',
+    jmeno: 'Husička',
     foto: 'obrazky/husa.jpg',
   },
 
   {
-    jmeno: 'Kočka',
+    jmeno: 'Kočička',
     foto: 'obrazky/kocka.jpg',
   },
 
   {
-    jmeno: 'Kůň',
+    jmeno: 'Koník',
     foto: 'obrazky/kun.jpg',
   },
 
   {
-    jmeno: 'Pes',
+    jmeno: 'Pejsek',
     foto: 'obrazky/pes.jpg',
   },
 ];
-
-// Vytvor obrazek zviratka krava s fotkou a popiskem.
-
-// 1. Zacneme vytvorenim obalujiciho div element s tridou 'zvire'.
-
-//let zvire =
 
 for (let i = 0; i < zvirata.length; i++) {
   let zvire = document.createElement('div');
@@ -60,7 +54,7 @@ for (let i = 0; i < zvirata.length; i++) {
   fotoZvirete.src = zvirata[i].foto;
   fotoZvirete.alt = zvirata[i].jmeno;
 
-  let jmenoZvirete = document.createElement('span');
+  let jmenoZvirete = document.createElement('div');
   jmenoZvirete.classList.add('jmeno');
   jmenoZvirete.textContent = zvirata[i].jmeno;
 
@@ -70,14 +64,10 @@ for (let i = 0; i < zvirata.length; i++) {
   farma.appendChild(zvire);
 }
 
-/*
- {
-    document.createElement('div');
-    zvire.className = 'zvire';
-    document.createElement('img').src;
+// Vytvor obrazek zviratka krava s fotkou a popiskem.
 
- } 
- */
+// 1. Zacneme vytvorenim obalujiciho div element s tridou 'zvire'.
+
 //let zvire = document.createElement('div');
 //zvire.className = 'zvire';
 
@@ -88,11 +78,8 @@ for (let i = 0; i < zvirata.length; i++) {
 //fotoZvirete.className = 'foto';
 //fotoZvirete.src = krava.foto;
 
-//let fotoZvirete =
-
 //2.2. Dale vytvor div element s tridou 'jmeno'. Jako text elementu zobraz hodnotu vlastnosti jmeno objektu krava.
 
-//let jmenoZvirete =
 /*
 let jmenoZvirete = document.createElement('span');
 jmenoZvirete.className = 'jmeno';
@@ -102,10 +89,10 @@ jmenoZvirete.innerHTML = krava.jmeno;
 
 zvire.appendChild(fotoZvirete);
 zvire.appendChild(jmenoZvirete);
+
 // 3. Nakonec pojdme nas kod zapojit do html stranky. Na html strance vyber existujici element s tridou farma.
 // a vloz do nej obalujici element zvire (pssst appendChild)
 
-//let farma =
 let farma = document.querySelector('.farma');
 farma.appendChild(zvire);
 */
